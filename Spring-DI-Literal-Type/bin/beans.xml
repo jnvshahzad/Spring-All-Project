@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+       https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- Using Setter Injection -->
+	<bean id="myself" class="com.pro.springdi.Myself">
+		<property name="myId" value="101" />
+		<property name="myName" value="Shahzad Alam"></property>
+	</bean>
+
+	<!-- Using Setter Injection -->
+	<bean id="mybrother" class="com.pro.springdi.Myself">
+		<property name="myId" value="102" />
+		<property name="myName" value="Shadab Alam"></property>
+	</bean>
+
+	<!-- Using Constructor Injection -->
+	<bean id="myself1" class="com.pro.springdi.Myself">
+		<constructor-arg name="myId" value="103" type="int"></constructor-arg>
+		<constructor-arg name="myName" value="Farha Naaz" type="java.lang.String"></constructor-arg>
+	</bean>
+	
+	<bean id="myid1" class="com.pro.springdi.Myself">
+		<constructor-arg name="myId" value="104"/>
+	</bean>
+	
+</beans>
