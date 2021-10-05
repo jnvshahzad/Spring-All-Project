@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+       https://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<!-- Address class object created and it is sharable -->
+	<bean id="address" class="com.pro.springdi.objecttype.Address">
+		<property name="streetNo" value="07"></property>
+		<property name="city" value="Patna"></property>
+		<property name="state" value="Bihar"></property>
+	</bean>
+	
+	<!-- First Students details -->
+	<bean id="studentDetails_1" class="com.pro.springdi.objecttype.Student">
+		<property name="studentId" value="101"></property>
+		<property name="studentName" value="Shahzad"></property>
+		
+		<!-- Shared object ref: address object  in student1-->
+		<property name="studentAddress" ref="address"></property>
+	</bean>
+	<!-- Second Students details -->
+	<bean id="studentDetails_2" class="com.pro.springdi.objecttype.Student">
+		<property name="studentId" value="102"></property>
+		<property name="studentName" value="Shadab"></property>
+		
+		<!-- Shared object ref: address object in student2-->
+		<property name="studentAddress" ref="address"></property>
+	</bean>
+
+
+
+
+
+</beans>
